@@ -1,21 +1,10 @@
 import React from 'react';
-import {View, Test, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
-const AddTransactionScreen = props => {
+export default function AddTransactionScreen () {
     return (
-        <View style={styles.screen}>
-            <Text>The Add Transaction Screen!</Text>
+        <View>
+            <Text>Elo</Text>
         </View>
-
-    );
-};
-
-const styles = StyleSheet.create({
-    screen: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-})
-
-export default AddTransactionScreen;
+    )
+}
