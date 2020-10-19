@@ -19,6 +19,7 @@ import { EvilIcons } from '@expo/vector-icons';
 
 
 
+
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
     return (
