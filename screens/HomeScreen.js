@@ -1,12 +1,22 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button,SafeAreaView} from 'react-native';
+import { EvilIcons } from '@expo/vector-icons'; 
+import {View, Text, StyleSheet, Button,SafeAreaView, Image, TouchableOpacity} from 'react-native';
 
 export default function HomeScreen () {
     return (
         <SafeAreaView style={{backgroundColor: "#4643D3", flex: 1}}>
+        <View style={styles.TopSection}>
+            <Image style={{width:45, height:45}}
+            source={require('../src/images/avatar.png')}
+            />
+            <Text style={styles.WelcomeName}>Hi, Suzy</Text>
+        </View>
         <View style={styles.BGTitle}>
             <Text style={styles.Cashe}>zł</Text>
             <Text style={styles.CasheTitle}>2,360</Text>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Search')}>
+                 <EvilIcons name="search" size={32} color='#FFF' />
+            </TouchableOpacity>
         </View>
         <View style={styles.bg}> 
             <Text>Eloasd</Text>
@@ -16,6 +26,16 @@ export default function HomeScreen () {
     }
 
     const styles = StyleSheet.create({
+        TopSection: {
+            marginTop:50,
+            marginLeft:25,
+            marginRight:25,
+            flexDirection:'row',
+        },
+        WelcomeName: {
+            fontSize:22,
+            color: '#FFF',
+        },
         BGTitle: {
             height: 125,
             alignItems: "center",

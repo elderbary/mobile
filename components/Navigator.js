@@ -18,8 +18,6 @@ import { EvilIcons } from '@expo/vector-icons';
 
 
 
-
-
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
     return (
@@ -61,7 +59,6 @@ const BottomTabNavigator = () => {
                 <Tab.Screen
                     name='AddTransactionScreen'
                     component={AddTransactionScreen}
-                    
                     options={{
                         tabBarLabel:'', 
                         tabBarIcon:({color,size})=>(
@@ -95,30 +92,32 @@ const BottomTabNavigator = () => {
 };
 const Stack = createStackNavigator();
 const screenOptionStyle = {
+    headerShown: false,
 };
 
 const ChatStackNavigator = () => {
     return(
         <Stack.Navigator screenOptions={screenOptionStyle}>
             <Stack.Screen 
-            name='Transactions' 
+            name='Home' 
             component={BottomTabNavigator}
-            options={{
-                headerStyle: {
-                    backgroundColor: '#4643D3',
-                    height:110,
-                },
-                headerTintColor: '#FFF',
-                headerTitleStyle: {
-                    marginLeft:10,
-                  },
-                headerRight: () => (
-                    <View style={{flexDirection:'row', width:40, marginRight:10,}}>
-                        <EvilIcons name="search" size={32} color='#FFF' />
-                    </View>
-                )
+            // options={{
+            //     headerStyle: {
+            //       backgroundColor: '#4643D3',
+            //         height:110,
+            //     },
+            //     headerTintColor: '#FFF',
+            //     headerTitleStyle: {
+            //         marginLeft:10,
+            //       },
+            //     headerRight: () => (
+            //         <View style={{flexDirection:'row', width:40, marginRight:10,}}>
+            //             <EvilIcons name="search" size={32} color='#FFF' />
+            //         </View>
+            //     )
                 
-            }}/>
+            // }}
+            />
         </Stack.Navigator>
     )
 }
