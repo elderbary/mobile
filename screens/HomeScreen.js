@@ -1,36 +1,38 @@
 import React from 'react';
 import { EvilIcons } from '@expo/vector-icons'; 
-import {View, Text, StyleSheet, Button,SafeAreaView, Image, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Button,SafeAreaView, Image, TouchableOpacity, useNavigation} from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Navigator from '../components/Navigator';
 
 export default function HomeScreen () {
-    return (
+      return (
         <SafeAreaView style={{backgroundColor: "#4643D3", flex: 1}}>
         <View style={styles.TopSection}>
-            <Image style={{width:45, height:45}}
+            <Image style={{width:45, height:45, marginTop: -8,}}
             source={require('../src/images/avatar.png')}
             />
             <Text style={styles.WelcomeName}>Hi, Suzy</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+                 <EvilIcons name="search" size={32} color='#FFF' />
+            </TouchableOpacity>
         </View>
         <View style={styles.BGTitle}>
             <Text style={styles.Cashe}>zł</Text>
             <Text style={styles.CasheTitle}>2,360</Text>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Search')}>
-                 <EvilIcons name="search" size={32} color='#FFF' />
-            </TouchableOpacity>
         </View>
         <View style={styles.bg}> 
             <Text>Eloasd</Text>
         </View>
         </SafeAreaView>
-    )
+      );
     }
-
     const styles = StyleSheet.create({
         TopSection: {
             marginTop:50,
-            marginLeft:25,
-            marginRight:25,
+            marginLeft:-10,
+            marginRight:-10,
             flexDirection:'row',
+            justifyContent: 'space-around',
         },
         WelcomeName: {
             fontSize:22,
@@ -58,5 +60,5 @@ export default function HomeScreen () {
             flex: 1,
             borderTopRightRadius:25,
             borderTopLeftRadius: 25,
-        },
+        }
     })

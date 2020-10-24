@@ -10,7 +10,7 @@ import {
   Montserrat_800ExtraBold
 } from '@expo-google-fonts/montserrat';
 
-import StackNavigator from './components/Navigator';
+import Navigator from './components/Navigator';
 
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
   }
   return(
     <NavigationContainer>
-      <StackNavigator/>
+      <Navigator/>
     </NavigationContainer>
   )
 }

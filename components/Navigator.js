@@ -8,6 +8,7 @@ import Transactions from '../screens/TransactionScreen';
 import CryptoIndex from '../screens/CryptoIndexScreen';
 import Summary from '../screens/SummaryScreen';
 import AddTransactionScreen from '../screens/AddTransactionScreen';
+import Search from '../screens/SearchScreen';
 
 import Icon from '@expo/vector-icons/Ionicons';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
@@ -15,6 +16,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons'; 
 import { Feather } from '@expo/vector-icons'; 
 import { EvilIcons } from '@expo/vector-icons'; 
+import SearchScreen from '../screens/SearchScreen';
 
 
 
@@ -101,22 +103,10 @@ const ChatStackNavigator = () => {
             <Stack.Screen 
             name='Home' 
             component={BottomTabNavigator}
-            // options={{
-            //     headerStyle: {
-            //       backgroundColor: '#4643D3',
-            //         height:110,
-            //     },
-            //     headerTintColor: '#FFF',
-            //     headerTitleStyle: {
-            //         marginLeft:10,
-            //       },
-            //     headerRight: () => (
-            //         <View style={{flexDirection:'row', width:40, marginRight:10,}}>
-            //             <EvilIcons name="search" size={32} color='#FFF' />
-            //         </View>
-            //     )
-                
-            // }}
+            />
+            <Stack.Screen 
+            name='SearchScreen' 
+            component={SearchScreen}
             />
         </Stack.Navigator>
     )
