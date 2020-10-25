@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
 
 export default function SettingsScreen () {
     return (
@@ -7,9 +7,11 @@ export default function SettingsScreen () {
             <View style={styles.Header}>
                 <Text style={styles.Title}>Settings</Text>
             </View>
-            <View style={styles.bg}>
-
-            </View>
+            <ScrollView style={styles.bg}>
+                <View style={styles.Content}>
+                <Text style={styles.SectionTitle}>USER</Text>
+                </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
@@ -29,5 +31,14 @@ const styles = StyleSheet.create({
         flex: 1,
         borderTopRightRadius:25,
         borderTopLeftRadius: 25,
-    }
+    },
+    Content: {
+        marginTop: 20,
+        marginLeft: 35,
+    },
+    SectionTitle: {
+        fontSize: 13,
+        color: 'lightgrey',
+        marginTop: 10,
+    },
 })
