@@ -1,5 +1,4 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
 import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
 
 export default function SettingsScreen () {

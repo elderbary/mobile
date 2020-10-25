@@ -17,6 +17,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons'; 
 import { EvilIcons } from '@expo/vector-icons'; 
 import SearchScreen from '../screens/SearchScreen';
+import SettingsScreen from '../screens/SettingsScreen'
 
 
 
@@ -107,6 +108,10 @@ const ChatStackNavigator = () => {
             <Stack.Screen 
             name='SearchScreen' 
             component={SearchScreen}
+            />
+            <Stack.Screen 
+            name='SettingsScreen' 
+            component={SettingsScreen}
             />
         </Stack.Navigator>
     )

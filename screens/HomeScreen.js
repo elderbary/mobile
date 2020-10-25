@@ -1,10 +1,10 @@
 import React from 'react';
-import { EvilIcons } from '@expo/vector-icons'; 
 import {View, Text, StyleSheet, Button,SafeAreaView, Image, TouchableOpacity, useNavigation} from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
-import Navigator from '../components/Navigator';
 
-export default function HomeScreen () {
+import { SimpleLineIcons } from '@expo/vector-icons'; 
+
+
+export default function HomeScreen ({ navigation }) {
       return (
         <SafeAreaView style={{backgroundColor: "#4643D3", flex: 1}}>
         <View style={styles.TopSection}>
@@ -12,8 +12,8 @@ export default function HomeScreen () {
             source={require('../src/images/avatar.png')}
             />
             <Text style={styles.WelcomeName}>Hi, Suzy</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-                 <EvilIcons name="search" size={32} color='#FFF' />
+            <TouchableOpacity onPress={() => navigation.navigate('SettingsScreen')}>
+                <SimpleLineIcons name="settings" size={22} color='#FFF' />
             </TouchableOpacity>
         </View>
         <View style={styles.BGTitle}>
