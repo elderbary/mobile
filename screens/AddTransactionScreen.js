@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     PickerStyle: {
         width: 120,
         height: 50,
-        borderWidth: 32,
+        borderWidth: 3,
     },
     bg: {
         backgroundColor: '#F3F4F6',
