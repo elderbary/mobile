@@ -4,7 +4,7 @@ import { ListItem, Icon } from "react-native-elements";
 
 export default function SettingsScreen() {
   return (
-    <SafeAreaView style={{ backgroundColor: "#4643D3", flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: "#3C3C3E", flex: 1 }}>
       <View style={styles.Header}>
         <Text style={styles.Title}>Settings</Text>
       </View>
@@ -88,9 +88,6 @@ const global = [
     title: "Default currency",
   },
   {
-    title: "First day of week",
-  },
-  {
     title: "Categories managment",
   },
 ];
@@ -121,7 +118,7 @@ const styles = StyleSheet.create({
     marginTop: 45,
   },
   bg: {
-    backgroundColor: "#FFF",
+    backgroundColor: "#F3F4F6",
     flex: 1,
     borderTopRightRadius: 25,
     borderTopLeftRadius: 25,
@@ -142,9 +139,9 @@ const styles = StyleSheet.create({
     marginTop: 0,
     height: 55,
     backgroundColor: "#FFF",
-    shadowColor: "#00000029",
-    elevation: 6,
-    borderRadius: 10,
+    borderTopRightRadius: 25,
+    borderTopLeftRadius: 25,
+    borderTopColor: '#FFF',
   },
   Footer: {
     flex: 1,

@@ -12,7 +12,6 @@ import {
 
 import Navigator from './components/Navigator';
 
-
 const App = () => {
   let [fontsLoaded] = useFonts({
     Montserrat_700Bold,

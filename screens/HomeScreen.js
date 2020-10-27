@@ -1,36 +1,41 @@
 import React from 'react';
-import {View, Text, StyleSheet, Button,SafeAreaView, Image, TouchableOpacity, useNavigation} from 'react-native';
+import {View, Text, StyleSheet, Button, SafeAreaView, Image, TouchableOpacity, useNavigation} from 'react-native';
 
-import { SimpleLineIcons } from '@expo/vector-icons'; 
+import { MaterialIcons } from '@expo/vector-icons'; 
 
+import FloatingButton from '../components/FloatingButton';
 
 export default function HomeScreen ({ navigation }) {
       return (
-        <SafeAreaView style={{backgroundColor: "#4643D3", flex: 1}}>
+        <SafeAreaView style={{backgroundColor: "#3C3C3E", flex: 1}}>
         <View style={styles.TopSection}>
             <Image style={{width:45, height:45, marginTop: -8,}}
             source={require('../src/images/avatar.png')}
             />
             <Text style={styles.WelcomeName}>Hi, Suzy</Text>
             <TouchableOpacity onPress={() => navigation.navigate('SettingsScreen')}>
-                <SimpleLineIcons name="settings" size={22} color='#FFF' />
+                <MaterialIcons name="menu" size={28} color='#FFF' />
             </TouchableOpacity>
         </View>
         <View style={styles.BGTitle}>
             <Text style={styles.Cashe}>zł</Text>
-            <Text style={styles.CasheTitle}>2,360</Text>
+            <Text style={styles.CasheTitle}>2 360</Text>
         </View>
         <View style={styles.bg}> 
             <Text>Eloasd</Text>
         </View>
+        <FloatingButton 
+          style={styles.floatinBtn}
+          onPress={() => navigation.navigate('AddTransactionScreen')}
+        />
         </SafeAreaView>
       );
     }
     const styles = StyleSheet.create({
         TopSection: {
             marginTop:50,
-            marginLeft:-10,
-            marginRight:-10,
+            marginLeft:-20,
+            marginRight:-20,
             flexDirection:'row',
             justifyContent: 'space-around',
         },
@@ -56,9 +61,14 @@ export default function HomeScreen ({ navigation }) {
             fontSize: 55,
         },
         bg: {
-            backgroundColor: '#FFF',
+            backgroundColor: '#F3F4F6',
             flex: 1,
             borderTopRightRadius:25,
             borderTopLeftRadius: 25,
-        }
+        },
+        floatinBtn: {
+            position: 'absolute',
+            bottom: 25,
+            right: 25,
+          }
     })

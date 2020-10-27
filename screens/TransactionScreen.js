@@ -1,49 +1,53 @@
 import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
 
-import { EvilIcons } from '@expo/vector-icons'; 
+import { MaterialIcons } from '@expo/vector-icons'; 
+
+import FloatingButton from '../components/FloatingButton';
 
 export default function TransactionScreen ({ navigation }) {
     return (
-        <SafeAreaView style={{backgroundColor:"#4643D3", flex:1,}}>
-            <View style={styles.SearchButton}>
+        <SafeAreaView style={{backgroundColor:"#3C3C3E", flex:1,}}>
+            <View style={styles.Header}>
+            <Text style={styles.Title}>Transaction</Text>
             <TouchableOpacity style={styles.Search} onPress={() => navigation.navigate('SearchScreen')}>
-                 <EvilIcons name="search" size={32} color='#FFF' />
+                <MaterialIcons name="search" size={28} color='#FFF' />
             </TouchableOpacity>
             </View>
-            <View style={styles.Header}>
-                <Text style={styles.Title}>Price</Text>
-            </View>
             <View style={styles.bg}>
-
+                
             </View>
+            <FloatingButton 
+          style={styles.floatinBtn}
+          onPress={() => navigation.navigate('AddTransactionScreen')}
+        />
         </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
-    SearchButton: {
+    Header: {
         marginTop: 50,
         height: 20,
-        marginRight: 32.5,
-    },
-    Search: {
+        marginRight: -72.5,
+        marginLeft: -72.5,
+        height: 60,
         flexDirection: 'row',
-        justifyContent: 'flex-end',
-    },
-    Header: {
-        height: 120,
+        justifyContent: 'space-around',
     },
     Title: {
-        marginLeft: 35,
         fontSize:22,
         color: '#FFF',
-        marginTop: 25,
     },
     bg: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#F3F4F6',
         flex: 1,
         borderTopRightRadius:25,
         borderTopLeftRadius: 25,
-    }
+    },
+    floatinBtn: {
+        position: 'absolute',
+        bottom: 25,
+        right: 25,
+      }
 })

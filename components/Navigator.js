@@ -11,11 +11,10 @@ import AddTransactionScreen from '../screens/AddTransactionScreen';
 import Search from '../screens/SearchScreen';
 
 import Icon from '@expo/vector-icons/Ionicons';
-import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+
 import { MaterialIcons } from '@expo/vector-icons'; 
-import { FontAwesome } from '@expo/vector-icons'; 
-import { Feather } from '@expo/vector-icons'; 
-import { EvilIcons } from '@expo/vector-icons'; 
+
+
 import SearchScreen from '../screens/SearchScreen';
 import SettingsScreen from '../screens/SettingsScreen'
 
@@ -26,7 +25,7 @@ const BottomTabNavigator = () => {
     return (
         <Tab.Navigator 
             tabBarOptions={{
-                activeTintColor:'#4643D3',
+                activeTintColor:'#3C3C3E',
                 inactiveTintColor:'#676767',
                 style:{
                     height:65,
@@ -45,7 +44,7 @@ const BottomTabNavigator = () => {
                     options={{
                         tabBarLabel:'',
                         tabBarIcon:({color,size})=>(
-                            <MaterialCommunityIcons name="home-outline" size={30} color={color}/>
+                            <MaterialIcons name="home" size={30} color={color}/>
                         )
                     }}
                 />
@@ -59,24 +58,13 @@ const BottomTabNavigator = () => {
                         )
                     }}
                 />
-                <Tab.Screen
-                    name='AddTransactionScreen'
-                    component={AddTransactionScreen}
-                    options={{
-                        tabBarLabel:'', 
-                        tabBarIcon:({color,size})=>(
-                            <Icon name="ios-add-circle" size={70} color="#FF7D3B" />
-
-                        )
-                    }}
-                />
                  <Tab.Screen
                     name='CryptoIndex'
                     component={CryptoIndex}
                     options={{
                         tabBarLabel:'',
                         tabBarIcon:({color,size})=>(
-                            <FontAwesome name="exchange" size={25} color={color} />
+                            <MaterialIcons name="show-chart" size={30} color={color} />
                         )
                     }}
                 />
@@ -86,7 +74,7 @@ const BottomTabNavigator = () => {
                     options={{
                         tabBarLabel:'',
                         tabBarIcon:({color,size})=>(
-                            <Feather name="pie-chart" size={28} color={color} />
+                            <MaterialIcons name="pie-chart-outlined" size={30} color={color} />
                         )
                     }}
                 />
@@ -112,6 +100,10 @@ const ChatStackNavigator = () => {
             <Stack.Screen 
             name='SettingsScreen' 
             component={SettingsScreen}
+            />
+            <Stack.Screen 
+            name='AddTransactionScreen' 
+            component={AddTransactionScreen}
             />
         </Stack.Navigator>
     )

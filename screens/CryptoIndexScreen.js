@@ -1,14 +1,19 @@
 import React from 'react';
-import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
 
-export default function CryptoIndexScreen () {
+import { MaterialIcons } from '@expo/vector-icons'; 
+
+export default function CryptoIndexScreen ({ navigation }) {
     return (
-        <SafeAreaView style={{backgroundColor:"#4643D3", flex:1,}}>
+        <SafeAreaView style={{backgroundColor:"#3C3C3E", flex:1,}}>
             <View style={styles.Header}>
-                <Text style={styles.Title}>Cryptocurrency price index</Text>
+            <Text style={styles.Title}>Cryptocurrency price index</Text>
+            <TouchableOpacity style={styles.Search} onPress={() => navigation.navigate('SearchScreen')}>
+                <MaterialIcons name="search" size={28} color='#FFF' />
+            </TouchableOpacity>
             </View>
             <View style={styles.bg}>
-
+                
             </View>
         </SafeAreaView>
     )
@@ -16,16 +21,20 @@ export default function CryptoIndexScreen () {
 
 const styles = StyleSheet.create({
     Header: {
-        height: 100,
+        marginTop: 50,
+        height: 20,
+        marginRight: 0,
+        marginLeft: 0,
+        height: 60,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
     },
     Title: {
-        marginLeft: 35,
         fontSize:22,
         color: '#FFF',
-        marginTop: 45,
     },
     bg: {
-        backgroundColor: '#FFF',
+        backgroundColor: '#F3F4F6',
         flex: 1,
         borderTopRightRadius:25,
         borderTopLeftRadius: 25,
