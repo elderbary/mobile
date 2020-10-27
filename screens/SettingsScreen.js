@@ -66,8 +66,8 @@ export default function SettingsScreen() {
           </View>
         </View>
         <View style={styles.Footer}>
-          <Text style={{color: '#BCBCBC', fontSize: 12,}}>Frugal</Text>
-          <Text style={{color: '#BCBCBC', fontSize: 10 ,}}>1.0.0</Text>
+          <Text style={{ color: "#BCBCBC", fontSize: 12 }}>Frugal</Text>
+          <Text style={{ color: "#BCBCBC", fontSize: 10 }}>1.0.0</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -141,11 +141,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFF",
     borderTopRightRadius: 25,
     borderTopLeftRadius: 25,
-    borderTopColor: '#FFF',
+    borderTopColor: "#FFF",
   },
   Footer: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
     alignItems: "center",
     marginTop: 20,
     marginBottom: 20,
