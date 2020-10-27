@@ -57,7 +57,7 @@ export default function SettingsScreen() {
             {about.map((item, i) => (
               <ListItem key={i}>
                 <ListItem.Content style={styles.ListItem}>
-                  <ListItem.Title style={{ fontSize: 17, marginLeft: 15 }}>
+                  <ListItem.Title style={{ fontSize: 17, marginLeft: 15,}}>
                     {item.title}
                   </ListItem.Title>
                 </ListItem.Content>
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     marginTop: 45,
   },
   bg: {
-    backgroundColor: "#F3F4F6",
+    backgroundColor: "#FFF",
     flex: 1,
     borderTopRightRadius: 25,
     borderTopLeftRadius: 25,
@@ -138,10 +138,8 @@ const styles = StyleSheet.create({
   ListItem: {
     marginTop: 0,
     height: 55,
-    backgroundColor: "#FFF",
-    borderTopRightRadius: 25,
-    borderTopLeftRadius: 25,
-    borderTopColor: "#FFF",
+    borderRadius: 25,
+    borderWidth: 1,
   },
   Footer: {
     flex: 1,
