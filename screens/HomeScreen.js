@@ -32,7 +32,7 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.CasheTitle}>2 360</Text>
       </View>
       <View style={styles.bg}>
-        <Text>Eloasd</Text>
+        <Text></Text>
       </View>
       <FloatingButton
         style={styles.floatinBtn}

@@ -48,7 +48,8 @@ export default function AddTransactionScreen({ navigation }) {
               paddingRight: 10,
               paddingLeft: 10,
               borderRadius: 15,
-              borderColor: "#3C3C3E",
+              borderColor: "#DEE9FF",
+              backgroundColor: '#DEE9FF',
             }}
           >
             <Picker style={styles.PickerStyle}>
@@ -65,6 +66,12 @@ export default function AddTransactionScreen({ navigation }) {
               <Picker.Item label="Transport" value="Transport" />
             </Picker>
           </View>
+        </View>
+        <View style={styles.Place}>
+          <TextInput style={styles.Date} placeholder='Date'></TextInput>
+        </View>
+        <View style={styles.Place}>
+          <TextInput style={styles.Date} placeholder='Title'></TextInput>
         </View>
       </View>
     </SafeAreaView>
@@ -107,8 +114,27 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   PickerStyle: {
-    width: 200,
+    width: 230,
     height: 50,
+    justifyContent: 'center', 
+    alignItems: "center",
+  },
+  Place: {
+    width: 255,
+    height: 50,
+    marginTop: 30,
+    borderWidth: 1.1,
+    borderRadius: 15,
+    borderColor: "#DEE9FF",
+    backgroundColor: '#DEE9FF',
+    alignItems: "center",
+    justifyContent: 'center', 
+    marginLeft: 70,
+  },
+  Date: {
+    fontSize: 18,
+    textAlign: 'center',
+    justifyContent: 'center',   
   },
   bg: {
     backgroundColor: "#F3F4F6",
